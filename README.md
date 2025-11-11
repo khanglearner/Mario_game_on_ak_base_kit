@@ -93,17 +93,12 @@ extern vector<mar_map_info_t> mar_vec_map;
 
 **Code**
 
-/*==============================*/
-/*           DEFINE             */
-/*==============================*/
+
 #define MAR_MAP_MOVE_X       (3)
 #define MAR_MAP_WIDTH        (128)
 #define MAX_MAP              (7)  
 #define NUM_MAP              (7)   
 
-/*==============================*/
-/*           GLOBAL             */
-/*==============================*/
 static int a = 1;   // current map version index (1..7)
 vector<mar_map_info_t> mar_vec_map;
 
@@ -113,9 +108,6 @@ vector<vector<uint8_t>> mar_vec_limit_wall_y = {
 	{2, 2, 1, 3, 2, 2, 2, 4, 4, 3, 3, 3},
 };
 
-/*==============================*/
-/*           FUNCTIONS          */
-/*==============================*/
 
 // clear all walls
 static inline void mar_game_map_reset() {
@@ -159,9 +151,6 @@ static void mar_game_map_setup() {
 	}
 }
 
-/*==============================*/
-/*         MAP MOVEMENT         */
-/*==============================*/
 
 // dịch chuyển map sang trái
 static void mar_game_map_move_left() {
@@ -206,9 +195,6 @@ static void mar_game_map_move_right() {
 	}
 }
 
-/*==============================*/
-/*           TASK HANDLER       */
-/*==============================*/
 
 void task_mar_map_handle(ak_msg_t *msg) {
 	switch (msg->sig) {
