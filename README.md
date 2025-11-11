@@ -71,7 +71,6 @@ extern vector<mar_map_info_t> mar_vec_map;
 
 
 - **Task: MAR_GAME_TASK_DISPLAY_GAME_ON_ID**
-        **Signal**
 		MAR_GAME_INITIAL_SETUP = AK_USER_DEFINE_SIG,
 		MAR_GAME_DISPLAY_ON_TICK = AK_USER_DEFINE_SIG,
 		MAR_GAME_RESET,
